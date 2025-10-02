@@ -7,8 +7,12 @@ import SelectField from "@/components/forms/SelectField";
 import {INVESTMENT_GOALS, PREFERRED_INDUSTRIES, RISK_TOLERANCE_OPTIONS} from "@/lib/constants";
 import {CountrySelectField} from "@/components/forms/CountrySelectField";
 import FooterLink from "@/components/forms/FooterLink";
+import {signUpWithEmail} from "@/lib/actions/auth.actions";
+import {useRouter} from "next/navigation";
+import {toast} from "sonner";
 
 const SignUp = () => {
+    const router = useRouter();
     const {
         register,
         handleSubmit,
@@ -29,9 +33,13 @@ const SignUp = () => {
 
     const onSubmit = async (data: SignUpFormData) => {
         try {
-            console.log(data);
+            const result = await signUpWithEmail(data);
+            if(result.success) router.push("/");
         } catch (e) {
             console.error(e);
+            toast.error('Sign up failed.', {
+                description: e instanceof Error ? e.message : 'Failed to create an account'
+            })
         }
     }
 
@@ -55,7 +63,7 @@ const SignUp = () => {
                     placeholder="jordanbelfort@strattonoakmont.com"
                     register={register}
                     error={errors.email}
-                    validation={{ required: 'Email is required', pattern: /^\w+@\w+$/, message: 'Email is requires'}}
+                    validation={{ required: 'Email is required', pattern: { value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/, message: 'Enter a valid email address' } }}
                 />
 
                 <InputField
@@ -65,7 +73,7 @@ const SignUp = () => {
                     type="password"
                     register={register}
                     error={errors.password}
-                    validation={{ required: 'Password is required', minLength: 8}}
+                    validation={{ required: 'Password is required', minLength: {value: 8,message: 'Password must be at least 8 characters'}}}
                 />
 
                 <CountrySelectField

@@ -33,9 +33,11 @@ type CountrySelectProps = {
 const CountrySelect = ({
                            value,
                            onChange,
+                           name,
                        }: {
     value: string;
     onChange: (value: string) => void;
+    name: string;
 }) => {
     const [open, setOpen] = useState(false);
 
@@ -56,11 +58,11 @@ const CountrySelect = ({
         <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
                 <Button
+                    id={name}
                     variant='outline'
                     role='combobox'
                     aria-expanded={open}
-                    className='country-select-trigger'
-                >
+                    className='country-select-trigger'>
                     {value ? (
                         <span className='flex items-center gap-2'>
               <span>{getFlagEmoji(value)}</span>
@@ -135,7 +137,7 @@ export const CountrySelectField = ({
                     required: required ? `Please select ${label.toLowerCase()}` : false,
                 }}
                 render={({ field }) => (
-                    <CountrySelect value={field.value} onChange={field.onChange} />
+                    <CountrySelect value={field.value} onChange={field.onChange} name={name} />
                 )}
             />
             {error && <p className='text-sm text-red-500'>{error.message}</p>}
