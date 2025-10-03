@@ -30,10 +30,9 @@
 1. ✨ [Introduction](#introduction)
 2. ⚙️ [Tech Stack](#tech-stack)
 3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
+<!-- 4. 🤸 [Quick Start](#quick-start)
 5. 🔗 [Assets](#links)
-6. 🚀 [More](#more)
-
+6. 🚀 [More](#more) -->
 <!-- ## 🚨 Tutorial
 
 This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
