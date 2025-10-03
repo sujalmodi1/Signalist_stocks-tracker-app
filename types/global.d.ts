@@ -168,6 +168,17 @@ declare global {
         news?: MarketNewsArticle[];
     };
 
+    type UserForNewsEmail = {
+        email: string;
+        id?: string;
+        name?: string;
+        country?: string;
+        investmentGoals?: string;
+        riskTolerance?: string;
+        preferredIndustry?: string;
+    };
+
+
     type SearchCommandProps = {
         open?: boolean;
         setOpen?: (open: boolean) => void;

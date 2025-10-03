@@ -54,7 +54,7 @@ const SignUp = () => {
                     placeholder="Jordan Belfort"
                     register={register}
                     error={errors.fullName}
-                    validation={{ required: 'Full name is required', minLength: 2}}
+                    validation={{ required: 'Full name is required', minLength: 2 }}
                 />
 
                 <InputField
