@@ -80,7 +80,7 @@ export const MARKET_OVERVIEW_WIDGET_CONFIG = {
                 { s: 'NASDAQ:AAPL', d: 'Apple' },
                 { s: 'NASDAQ:GOOGL', d: 'Alphabet' },
                 { s: 'NASDAQ:MSFT', d: 'Microsoft' },
-                { s: 'NASDAQ:FB', d: 'Meta Platforms' },
+                { s: 'NASDAQ:META', d: 'Meta Platforms' },
                 { s: 'NYSE:ORCL', d: 'Oracle Corp' },
                 { s: 'NASDAQ:INTC', d: 'Intel Corp' },
             ],
@@ -128,7 +128,7 @@ export const HEATMAP_WIDGET_CONFIG = {
     hasSymbolTooltip: true,
     isMonoSize: false,
     width: '100%',
-    height: '600',
+    height: 600,
 };
 
 export const TOP_STORIES_WIDGET_CONFIG = {
@@ -179,7 +179,7 @@ export const MARKET_DATA_WIDGET_CONFIG = {
                 { name: 'NASDAQ:AAPL', displayName: 'Apple' },
                 { name: 'NASDAQ:GOOGL', displayName: 'Alphabet' },
                 { name: 'NASDAQ:MSFT', displayName: 'Microsoft' },
-                { name: 'NASDAQ:FB', displayName: 'Meta Platforms' },
+                { name: 'NASDAQ:META', displayName: 'Meta Platforms' },
                 { name: 'NYSE:ORCL', displayName: 'Oracle Corp' },
                 { name: 'NASDAQ:INTC', displayName: 'Intel Corp' },
             ],
@@ -207,7 +207,7 @@ export const MARKET_DATA_WIDGET_CONFIG = {
 };
 
 export const SYMBOL_INFO_WIDGET_CONFIG = (symbol: string) => ({
-    symbol: symbol.toUpperCase(),
+    symbol: symbol.includes(':') ? symbol.toUpperCase() : `NSE:${symbol.toUpperCase()}`,
     colorTheme: 'dark',
     isTransparent: true,
     locale: 'en',
@@ -228,7 +228,7 @@ export const CANDLE_CHART_WIDGET_CONFIG = (symbol: string) => ({
     locale: 'en',
     save_image: false,
     style: 1,
-    symbol: symbol.toUpperCase(),
+    symbol: symbol.includes(':') ? symbol.toUpperCase() : `NSE:${symbol.toUpperCase()}`,
     theme: 'dark',
     timezone: 'Etc/UTC',
     backgroundColor: '#141414',
@@ -254,7 +254,7 @@ export const BASELINE_WIDGET_CONFIG = (symbol: string) => ({
     locale: 'en',
     save_image: false,
     style: 10,
-    symbol: symbol.toUpperCase(),
+    symbol: symbol.includes(':') ? symbol.toUpperCase() : `NSE:${symbol.toUpperCase()}`,
     theme: 'dark',
     timezone: 'Etc/UTC',
     backgroundColor: '#141414',
@@ -268,7 +268,7 @@ export const BASELINE_WIDGET_CONFIG = (symbol: string) => ({
 });
 
 export const TECHNICAL_ANALYSIS_WIDGET_CONFIG = (symbol: string) => ({
-    symbol: symbol.toUpperCase(),
+    symbol: symbol.includes(':') ? symbol.toUpperCase() : `NSE:${symbol.toUpperCase()}`,
     colorTheme: 'dark',
     isTransparent: 'true',
     locale: 'en',
@@ -279,7 +279,7 @@ export const TECHNICAL_ANALYSIS_WIDGET_CONFIG = (symbol: string) => ({
 });
 
 export const COMPANY_PROFILE_WIDGET_CONFIG = (symbol: string) => ({
-    symbol: symbol.toUpperCase(),
+    symbol: symbol.includes(':') ? symbol.toUpperCase() : `NSE:${symbol.toUpperCase()}`,
     colorTheme: 'dark',
     isTransparent: 'true',
     locale: 'en',
@@ -288,7 +288,7 @@ export const COMPANY_PROFILE_WIDGET_CONFIG = (symbol: string) => ({
 });
 
 export const COMPANY_FINANCIALS_WIDGET_CONFIG = (symbol: string) => ({
-    symbol: symbol.toUpperCase(),
+    symbol: symbol.includes(':') ? symbol.toUpperCase() : `NSE:${symbol.toUpperCase()}`,
     colorTheme: 'dark',
     isTransparent: 'true',
     locale: 'en',
