@@ -166,7 +166,7 @@ export const MARKET_DATA_WIDGET_CONFIG = {
         {
             name: 'Indian Financial',
             symbols: [
-                { name: 'NSE:RELIANCE', displayName: 'Reliance Industries' },
+                { name: 'NYSE:JPM', displayName: 'JPMorgan Chase' },
                 { name: 'NSE:TCS', displayName: 'Tata Consultancy Services' },
                 { name: 'NSE:HDFCBANK', displayName: 'HDFC Bank' },
                 { name: 'NSE:ICICIBANK', displayName: 'ICICI Bank' },
