@@ -55,7 +55,7 @@ export const MARKET_OVERVIEW_WIDGET_CONFIG = {
     symbolActiveColor: 'rgba(15, 237, 190, 0.05)', // highlight color for active symbol
     tabs: [
         {
-            title: 'Financial',
+            title: 'US Financial',
             symbols: [
                 { s: 'NYSE:JPM', d: 'JPMorgan Chase' },
                 { s: 'NYSE:WFC', d: 'Wells Fargo Co New' },
@@ -66,7 +66,16 @@ export const MARKET_OVERVIEW_WIDGET_CONFIG = {
             ],
         },
         {
-            title: 'Technology',
+            title: 'Indian Financial',
+            symbols: [
+                { s: 'NSE:RELIANCE', d: 'Reliance Industries' },
+                { s: 'NSE:TCS', d: 'Tata Consultancy Services' },
+                { s: 'NSE:HDFCBANK', d: 'HDFC Bank' },
+                { s: 'NSE:ICICIBANK', d: 'ICICI Bank' },
+            ],
+        },
+        {
+            title: 'US Technology',
             symbols: [
                 { s: 'NASDAQ:AAPL', d: 'Apple' },
                 { s: 'NASDAQ:GOOGL', d: 'Alphabet' },
@@ -74,6 +83,14 @@ export const MARKET_OVERVIEW_WIDGET_CONFIG = {
                 { s: 'NASDAQ:FB', d: 'Meta Platforms' },
                 { s: 'NYSE:ORCL', d: 'Oracle Corp' },
                 { s: 'NASDAQ:INTC', d: 'Intel Corp' },
+            ],
+        },
+        {
+            title: 'Indian Technology',
+            symbols: [
+                { s: 'NSE:INFY', d: 'Infosys' },
+                { s: 'NSE:WIPRO', d: 'Wipro' },
+                { s: 'NSE:HCLTECH', d: 'HCL Technologies' },
             ],
         },
         {
@@ -136,7 +153,7 @@ export const MARKET_DATA_WIDGET_CONFIG = {
     backgroundColor: '#0F0F0F',
     symbolsGroups: [
         {
-            name: 'Financial',
+            name: 'US Financial',
             symbols: [
                 { name: 'NYSE:JPM', displayName: 'JPMorgan Chase' },
                 { name: 'NYSE:WFC', displayName: 'Wells Fargo Co New' },
@@ -147,7 +164,17 @@ export const MARKET_DATA_WIDGET_CONFIG = {
             ],
         },
         {
-            name: 'Technology',
+            name: 'Indian Financial',
+            symbols: [
+                { name: 'NSE:RELIANCE', displayName: 'Reliance Industries' },
+                { name: 'NSE:TCS', displayName: 'Tata Consultancy Services' },
+                { name: 'NSE:HDFCBANK', displayName: 'HDFC Bank' },
+                { name: 'NSE:ICICIBANK', displayName: 'ICICI Bank' },
+                { name: 'NSE:INFY', displayName: 'Infosys' },
+            ],
+        },
+        {
+            name: 'US Technology',
             symbols: [
                 { name: 'NASDAQ:AAPL', displayName: 'Apple' },
                 { name: 'NASDAQ:GOOGL', displayName: 'Alphabet' },
@@ -155,6 +182,15 @@ export const MARKET_DATA_WIDGET_CONFIG = {
                 { name: 'NASDAQ:FB', displayName: 'Meta Platforms' },
                 { name: 'NYSE:ORCL', displayName: 'Oracle Corp' },
                 { name: 'NASDAQ:INTC', displayName: 'Intel Corp' },
+            ],
+        },
+        {
+            name: 'Indian Technology',
+            symbols: [
+                { name: 'NSE:INFY', displayName: 'Infosys' },
+                { name: 'NSE:TCS', displayName: 'Tata Consultancy Services' },
+                { name: 'NSE:WIPRO', displayName: 'Wipro' },
+                { name: 'NSE:HCLTECH', displayName: 'HCL Technologies' },
             ],
         },
         {
